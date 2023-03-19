@@ -1,0 +1,125 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navHolder {
+    height: 75px;
+}
+.navContainer {
+    /* position: sticky;
+    top: 0px; */
+    display: flex;
+    justify-content: center;
+    right: 0;
+    z-index: 10;
+    left: 0;
+    background-color: white;
+    /* box-shadow: 0 0 6px 2px #abaaaa; */
+}
+.navContainerBox {
+    display: flex;
+    width: 97%;
+    height: 75px;
+    align-items: center;
+    justify-content: space-between;
+}
+.navContainerBox img {
+    width: 130px;
+    object-fit: cover;
+    margin-top: 0px;
+}
+.navContainerBoxItem ul{
+    display: flex;
+}
+.navContainerBoxItem ul li {
+    list-style: none;
+    margin-right: 21px;
+    font-size: 20px;
+    color: #b37402;
+    font-weight: 600;
+}
+.MobileNavContainerBoxItem{
+    display: none;
+}
+.MenuSliderContainerBlock{
+    display: none;
+}
+.MenuSliderContainerNone{
+    display: none;
+}
+.navHolder a {
+    text-decoration: none;
+    color: #0b65c6;
+    cursor: pointer;
+}
+
+
+/* -------------------Media Queries--------------
+------------------------------------------------- */
+@media(max-width:769px){
+    .navContainerBox img {
+        width: 110px;
+    }
+    .navContainerBoxItem{
+        display: none;
+    }
+    .spanMenuContainer{
+        position: relative;
+    }
+    .MobileNavContainerBoxItem{
+        display:block ;
+    }
+    #hamburgerMenuIcon{
+    }
+    .MobileNavContainerBoxItem1{
+
+    }
+    .MobileNavContainerBoxItemPeace{
+
+    }
+    .MuiDrawer-paperAnchorTop{
+        top: 75px !important;
+    }
+    .MenuSliderContainerNone{
+        display: none;
+        animation: fade-in 1s;
+    }
+    .MenuSliderContainerBlock {
+        display: block;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 65px;
+        width: 100%;
+        background-color: white;
+        z-index: 1;
+        animation: fade-in 1s;
+        /* box-shadow: 0px 70px 48px -59px #efefefba; */
+    }
+    @keyframes fade-in {
+        0% {
+             opacity: 0;
+             transform: translate(0, -65px)
+        }
+   
+        100% {
+             opacity: 1;
+             transform: translate(0, 0px)
+        }
+   }
+    .MenuSliderContainerBox ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 0;
+        padding: 0;
+    }
+    .MenuSliderContainerBox ul li {
+        list-style: none;
+        text-align: start;
+        color: #35637a;
+        margin: 10px;
+        font-weight: 600;
+        font-size: 17px;
+    }
+}

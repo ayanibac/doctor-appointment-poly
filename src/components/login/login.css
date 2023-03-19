@@ -1,0 +1,77 @@
+.loginHolder {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.loginHolderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.LoginFieldContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.LoginImgContainer {
+    width: 100%;
+}
+.LoginImgContainer img {
+    width: 100%;
+}
+.MuiFormControl-root {
+    margin: 0 !important;
+}
+.passField{
+    margin-top: 20px !important;
+}
+.LoginButton{
+    width:217px !important;
+    margin-top: 35px !important;
+    text-transform: none !important;
+}
+.inputField{
+    width: 214px;
+    margin-top: 20px !important;
+}
+.registerText{
+    margin-top: 20px;
+}
+#link {
+    color: #00436a;
+    text-decoration: none;
+    font-weight: 400;
+}
+.loginText {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0967c4;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #0b65c573;
+    padding-bottom: 6px;
+    width: auto;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .loginHolderContainer {
+        flex-direction: column;
+    }
+    .loginText {
+        margin-bottom: 2px;
+    }
+    .LoginImgContainer img {
+        width: 95%;
+        margin-top: 43px;
+    }
+    .loginHolder {
+        margin-top: 70px;
+    }
+}
