@@ -72,6 +72,7 @@
         margin-top: 43px;
     }
     .loginHolder {
-        margin-top: 70px;
+        margin-top: 50px;
+        align-items: flex-start;
     }
 }
