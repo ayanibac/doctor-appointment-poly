@@ -1,0 +1,39 @@
+.appointHoder {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.appointHoderBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+}
+
+.appointHoderBox img {
+    width: 80%;
+    filter: opacity(0.4);
+}
+.appointHoderBox Button{
+    text-transform: none;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 3;
+}
+
+/* ------Media Quries------
+------------------------ */
+@media (max-width:769px) {
+    .appointHoderBox img {
+        width: 100%;
+        filter: opacity(0.4);
+    }
+    .appointHoderBox Button{
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}

@@ -21,6 +21,7 @@ body{
     height: 75px;
     align-items: center;
     justify-content: space-between;
+    z-index: 24;
 }
 .navContainerBox img {
     width: 130px;
@@ -91,7 +92,7 @@ body{
         top: 65px;
         width: 100%;
         background-color: white;
-        z-index: 1;
+        z-index: 20;
         animation: fade-in 1s;
         /* box-shadow: 0px 70px 48px -59px #efefefba; */
     }

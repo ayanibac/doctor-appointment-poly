@@ -1,4 +1,6 @@
 import React from 'react'
+import { Fade } from 'react-reveal';
+import { Link } from 'react-router-dom';
 //----images----
 import login from '../../images/login.jpg'
 //----css-----
@@ -13,8 +15,7 @@ import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Button } from '@mui/material';
-import { Fade } from 'react-reveal';
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -66,7 +67,7 @@ function Register() {
                     <Fade bottom>
                         <TextField id="standard-basic" label="Phone number" variant="standard" className='inputField' />
                     </Fade>
-                    
+
                     <Fade bottom>
                         <Button className='LoginButton' variant='contained'>Register</Button>
                     </Fade>
@@ -75,9 +76,7 @@ function Register() {
                     </Fade>
                 </div>
                 <div className='LoginImgContainer' >
-                    <Fade bottom>
-                        <img src={login} />
-                    </Fade>
+                    <img src={login} />
                 </div>
             </div>
         </div>

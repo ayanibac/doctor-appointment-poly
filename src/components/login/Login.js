@@ -14,25 +14,30 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Button } from '@mui/material';
 import { Fade } from 'react-reveal';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
 function Login() {
 
     const [showPassword, setShowPassword] = React.useState(false);
+    const navigate = useNavigate()
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
+    const formOnSubmited = (e) => {
+        e.preventDefault();
+        navigate("/appointment")
+    }
 
     return (
         <div className='loginHolder'>
             <div className='loginHolderContainer'>
-                <div className='LoginFieldContainer'>
-                <Fade bottom>
+                <form className='LoginFieldContainer' onSubmit={formOnSubmited}>
+                    <Fade bottom>
                         <p className='loginText'>Login</p>
                     </Fade>
                     <Fade bottom>
@@ -40,35 +45,35 @@ function Login() {
                     </Fade>
                     <Fade bottom>
                         <FormControl sx={{ m: 1, width: '25ch' }} variant="standard" className='passField'>
-                           
-                                <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
-                                <Input
-                                    id="standard-adornment-password"
-                                    type={showPassword ? 'text' : 'password'}
-                                    endAdornment={
-                                        <InputAdornment position="end">
-                                            <IconButton
-                                                aria-label="toggle password visibility"
-                                                onClick={handleClickShowPassword}
-                                                onMouseDown={handleMouseDownPassword}
-                                            >
-                                                {showPassword ? <VisibilityOff /> : <Visibility />}
-                                            </IconButton>
-                                        </InputAdornment>
-                                    }
-                                />
+
+                            <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+                            <Input
+                                id="standard-adornment-password"
+                                type={showPassword ? 'text' : 'password'}
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                            aria-label="toggle password visibility"
+                                            onClick={handleClickShowPassword}
+                                            onMouseDown={handleMouseDownPassword}
+                                        >
+                                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                                        </IconButton>
+                                    </InputAdornment>
+                                }
+                            />
 
                         </FormControl>
                     </Fade>
                     <Fade bottom>
-                        <Button className='LoginButton' variant='contained'>Log In</Button>
+                        <Button className='LoginButton' type="submit" variant='contained'>Log In</Button>
                     </Fade>
-                    <p className='registerText'>Don't have account ?<Link id="link" to="/register"> Register</Link></p>
-                </div>
-                <div className='LoginImgContainer' >
                     <Fade bottom>
-                        <img src={login} />
+                        <p className='registerText'>Don't have account ?<Link id="link" to="/register"> Register</Link></p>
                     </Fade>
+                </form>
+                <div className='LoginImgContainer' >
+                    <img src={login} />
                 </div>
             </div>
         </div>

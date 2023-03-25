@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade';
 import './navbar.css'
 //----image---
 import logo from '../../images/logo.png'
+import { Link } from 'react-router-dom';
 function Navbar() {
 
     const [isOpen, setOpen] = useState(false)
@@ -24,19 +25,19 @@ function Navbar() {
                         <div className='navContainerBoxItem'>
                             <ul>
                                 <Fade top>
-                                    <li><a href='#home' >HOME</a></li>
+                                    <li><Link to="/" >HOME</Link></li>
                                 </Fade>
                                 <Fade top>
-                                    <li><a href='#services'>SERVICES</a></li>
+                                    <li><Link to="/" >SERVICES</Link></li>
                                 </Fade>
                                 <Fade top>
-                                    <li><a href='#clients'>CLIENTS</a></li>
+                                    <li><Link to="/" >CLIENTS</Link></li>
                                 </Fade>
                                 <Fade top>
-                                    <li><a href='#test'>TESTIMONIALS</a></li>
+                                    <li><Link to="/" >TESTIMONIALS</Link></li>
                                 </Fade>
                                 <Fade top>
-                                    <li><a href='#contact'>CONTACT US</a></li>
+                                    <li><Link to="/" >CONTACT US</Link></li>
                                 </Fade>
                             </ul>
                         </div>
@@ -54,53 +55,53 @@ function Navbar() {
                     <div className='MenuSliderContainerBox'>
                         <ul>
                             <li>
-                                <a href='#home' onClick={() => {
+                                <Link to="/" onClick={() => {
                                     setOpen(false)
                                     setSliderClicked(false)
                                 }}
                                 >
                                     HOME
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href='#services'
+                                <Link to="/"
                                     onClick={() => {
                                         setOpen(false)
                                         setSliderClicked(false)
                                     }}
                                 >
                                     SERVICES
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href='#clients'
+                                <Link to="/"
                                     onClick={() => {
                                         setOpen(false)
                                         setSliderClicked(false)
                                     }}
                                 >
                                     CLIENTS
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href='#test'
+                                <Link to="/"
                                     onClick={() => {
                                         setOpen(false)
                                         setSliderClicked(false)
                                     }}
                                 >
                                     TESTIMONIALS
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href='#contact'
+                                <Link to="/"
                                     onClick={() => {
                                         setOpen(false)
                                         setSliderClicked(false)
                                     }}
                                 >
                                     CONTACT US
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
