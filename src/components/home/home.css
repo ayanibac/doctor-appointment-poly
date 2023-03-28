@@ -4,3 +4,51 @@
 body {
     background-color: #f9f9f9;
 }
+.homeHolder {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.homeHolderContainer {
+    width: 500px;
+    display: flex;
+    margin: 50px 0;
+    flex-direction: column;
+}
+
+.textField {
+    margin-bottom: 29px !important;
+}
+.selectField {
+    margin-left: -1px !important;
+    width: 503px;
+}
+.appointButton {
+    text-transform: none !important;
+    height: 45px !important;
+    font-size: 16px !important;
+    margin: 14px 0 !important;
+}
+
+/* -----------media quries--------------
+---------------------------------- */
+
+@media (max-width:769px) {
+    .homeHolderContainer {
+        width: 70%;
+        display: flex;
+        margin: 16px 0;
+        flex-direction: column;
+    }
+    .selectField {
+        margin-left: -1px !important;
+        width: 101%;
+    }
+    .appointButton {
+        text-transform: none !important;
+        height: 36px !important;
+        font-size: 15px !important;
+        margin: 2px 0 !important;
+    }
+}

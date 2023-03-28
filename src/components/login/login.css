@@ -26,7 +26,7 @@
 .LoginImgContainer img {
     width: 100%;
 }
-.MuiFormControl-root {
+ .loginHolder .MuiFormControl-root {
     margin: 0 !important;
 }
 .passField{
