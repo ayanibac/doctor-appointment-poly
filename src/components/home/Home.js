@@ -81,7 +81,7 @@ function Home() {
             labelId="demo-simple-select-standard-label"
             id="demo-simple-select-standard"
             value={payment}
-            onChange={handleChange4}
+            onChange={handleChange3}
             label="Select Payment Method"
           >
             <MenuItem value="">
